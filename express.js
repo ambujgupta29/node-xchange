@@ -5,6 +5,7 @@ const fs=require('fs')
 const path=require('path')
 const utf8=require('utf8')
 const app=express()
+const port = process.env.PORT ||3000
 
 const publicdir=path.join(__dirname,'../photos')
 const publicdir_profile=path.join(__dirname,'../profilepic')
@@ -410,7 +411,7 @@ app.get('/api/signup/name/profile/:email',(req,res)=>{
 
 
 
-app.listen('3000',(err,result)=>{
+app.listen(port,(err,result)=>{
     if(err){
         console.log('error has occured')
     }
