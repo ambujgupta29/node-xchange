@@ -52,8 +52,6 @@ con.query(sql,function (err, result) {
   })   
 })
 
-
-
 app.get('/api/signup/items/image/:item_id',(req,res)=>{
   var id1=req.params.item_id;
   var user1;
