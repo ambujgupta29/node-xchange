@@ -5,7 +5,7 @@ const fs=require('fs')
 const path=require('path')
 const utf8=require('utf8')
 const app=express()
-const port = process.env.PORT ||3000
+const port =process.env.PORT || 3000
 
 const publicdir=path.join(__dirname,'../photos')
 const publicdir_profile=path.join(__dirname,'../profilepic')
@@ -50,6 +50,10 @@ con.query(sql,function (err, result) {
   if (err) throw err;
   res.send(result);
   })   
+})
+
+app.get('/api/signup/name/home2',(req,res)=>{
+  console.log("hello")
 })
 
 app.get('/api/signup/items/image/:item_id',(req,res)=>{
